@@ -15,9 +15,26 @@ class Movie extends Component{
             <div className='movies-section'>
             {/* {this.getMovies(this.state.avengers.name, this.state.avengers.likes, this.state.avengers.banner)} */}
             {/* {this.getMovies(this.state.heist.name, this.state.heist.likes, this.state.heist.banner)} */}
-            {this.getMovies(this.state.avengers)}
+            {/* {this.getMovies(this.state.avengers)}
             {this.getMovies(this.state.heist)}
-            {this.getMovies(this.state.crimes)}
+            {this.getMovies(this.state.crimes)} */}
+
+            
+{/* 
+                {Object.keys(this.state).map(x => {
+                    console.log(x)
+                })} */}
+
+                {/* {Object.keys(this.state).map(x => {
+                    console.log(this.state[x])
+                })} */}
+
+                {
+                    Object.keys(this.state).map(x=> {
+                        return this.getMovies(this.state[x])
+                    })
+                }
+                
             </div>
         )
         }
